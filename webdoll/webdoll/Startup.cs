@@ -36,6 +36,10 @@ namespace webdoll
                 app.UseHsts();
             }
 
+            //静的fileを提供し、既定のファイルマッピングを有効にする
+            app.UseDefaultFiles();   
+            app.UseStaticFiles();
+
             app.UseHttpsRedirection();
             app.UseMvc();
         }
